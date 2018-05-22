@@ -1,0 +1,26 @@
+<html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+        </head>
+        
+        <body>
+        <table class="table-fill" ng-init="getVehicles()">
+        <thead>
+        <tr>
+        <th class="text-left">Name</th>
+        <th class="text-left">Description</th>
+        <th class="text-left">Image Urls</th>
+        <th class="text-left">Action</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr ng-repeat="document in documents">
+        <td class="text-left">{{document.name}}</td>
+        <td class="text-left">{{document.description}}</td>
+        <td class="text-left">{{document.imageUrl}}></td>
+        <td class="text-left"><i class="fas fa-trash-alt" ng-click="deleteDocument(document._id)"></i></td>
+        </tr>
+        </tbody>
+        </table>
+          </body>

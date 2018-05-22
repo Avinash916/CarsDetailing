@@ -1,0 +1,18 @@
+<div ng-init="getVehicles()">
+    <div ng-if="documents">
+<div ng-repeat="document in documents" style="display:inline-flex">
+        <md-card style="width:300px;" ng-click="viewDetails(document)">
+                <img ng-src="{{document.imgs[0].url}}" class="md-card-image" alt="Washed Out">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">{{document.name}}</span>
+                  </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    {{document.description}}
+                </md-card-content>
+              </md-card>
+</div>
+    </div>
+</div>
+
